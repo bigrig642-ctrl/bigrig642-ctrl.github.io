@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Server Setup Guide</title>
+  <meta name="description" content="Dark single-page setup guide for the Discord server setup suite.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div>
+        <p class="eyebrow">Server Setup Guide</p>
+        <h1 class="site-title">Modular Admin Setup Suite</h1>
+      </div>
+      <a class="header-link" href="#command-catalog">View All Commands</a>
+    </div>
+  </header>
+
+  <a class="side-button" href="#command-catalog" aria-label="Jump to the full slash command list">
+    <span>All Commands</span>
+  </a>
+
+  <main id="main-content" class="page-shell">
+    <section class="hero-panel">
+      <div class="hero-top">
+        <div>
+          <p class="eyebrow">Current Setup Flow</p>
+          <h2 class="hero-title">Primary Setup Options</h2>
+          <p class="hero-subtitle">
+            One-page setup manual for the current Discord bot systems. Use the setup commands below to configure
+            welcome messages, vouches, roles, tickets, applications, channels, and the full config view.
+          </p>
+        </div>
+        <div class="hero-badge">
+          <span class="badge-label">Core Setup</span>
+          <span class="badge-value">7 Slash Commands</span>
+        </div>
+      </div>
+
+      <div class="command-stack" aria-label="Primary setup commands">
+        <article class="command-row">
+          <h3 class="command-name">/setupwelcome</h3>
+          <p class="command-desc">Configure the welcome channel, welcome message text, enable state, preview mode, and embed toggle.</p>
+        </article>
+        <article class="command-row">
+          <h3 class="command-name">/setupvouch</h3>
+          <p class="command-desc">Set the vouch channel, enable or disable the system, and toggle embed mode for posted vouches.</p>
+        </article>
+        <article class="command-row">
+          <h3 class="command-name">/setuproles</h3>
+          <p class="command-desc">Assign Staff, Helper, PM, Ticket Staff, and Staff Apps Review roles with reset support.</p>
+        </article>
+        <article class="command-row">
+          <h3 class="command-name">/setuptickets</h3>
+          <p class="command-desc">Build up to 7 ticket types with labels, categories, ping roles, viewer roles, allowed opener roles, and button style.</p>
+        </article>
+        <article class="command-row">
+          <h3 class="command-name">/setupapps</h3>
+          <p class="command-desc">Create application types, review channels, questions, reviewer roles, and role grants on acceptance.</p>
+        </article>
+        <article class="command-row">
+          <h3 class="command-name">/setupchannels</h3>
+          <p class="command-desc">Choose utility channels such as vouches, partner tracking, ticket logs, task deadlines, and giveaways.</p>
+        </article>
+        <article class="command-row">
+          <h3 class="command-name">/setupview</h3>
+          <p class="command-desc">Open a full config summary showing enabled systems, saved channels, roles, panels, and missing-reference warnings.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="grid-panel" aria-label="System overview panels">
+      <article class="mini-card">
+        <div class="mini-head"><span class="mini-number">1</span><h3>Giveaway System</h3></div>
+        <ul>
+          <li>Configurable giveaway channel</li>
+          <li>Optional manager role access</li>
+          <li>Create and track giveaway posts</li>
+          <li>Stored per guild</li>
+        </ul>
+      </article>
+      <article class="mini-card">
+        <div class="mini-head"><span class="mini-number">2</span><h3>Partner Tracking</h3></div>
+        <ul>
+          <li>Partner tracking channel</li>
+          <li>Partner post logging</li>
+          <li>Saved channel validation</li>
+          <li>Guild-specific settings</li>
+        </ul>
+      </article>
+      <article class="mini-card">
+        <div class="mini-head"><span class="mini-number">3</span><h3>Application System</h3></div>
+        <ul>
+          <li>Up to 5 application types</li>
+          <li>Up to 10 questions per type</li>
+          <li>Review channels and reviewer roles</li>
+          <li>Accept, deny, and request-more-info flow</li>
+        </ul>
+      </article>
+      <article class="mini-card">
+        <div class="mini-head"><span class="mini-number">4</span><h3>Vouch System</h3></div>
+        <ul>
+          <li>Set vouch channel</li>
+          <li>Plain message or embed mode</li>
+          <li>Enable, disable, or unset</li>
+          <li>Per-guild storage</li>
+        </ul>
+      </article>
+      <article class="mini-card">
+        <div class="mini-head"><span class="mini-number">5</span><h3>Staff Tasks System</h3></div>
+        <ul>
+          <li>Task assignment support</li>
+          <li>Task deadline channel</li>
+          <li>Optional reminders and logs</li>
+          <li>Persistent settings</li>
+        </ul>
+      </article>
+      <article class="mini-card">
+        <div class="mini-head"><span class="mini-number">6</span><h3>Economy / Pricing</h3></div>
+        <ul>
+          <li>Pricing config hooks</li>
+          <li>Optional channel or notes support</li>
+          <li>Lightweight by design</li>
+          <li>No extra bloat</li>
+        </ul>
+      </article>
+      <article class="mini-card">
+        <div class="mini-head"><span class="mini-number">7</span><h3>Roles & Utilities</h3></div>
+        <ul>
+          <li>Staff, Helper, PM roles</li>
+          <li>Ticket Staff and App Review roles</li>
+          <li>Deleted-role handling</li>
+          <li>Reset one or all roles</li>
+        </ul>
+      </article>
+      <article class="mini-card">
+        <div class="mini-head"><span class="mini-number">8</span><h3>Dashboard / Export</h3></div>
+        <ul>
+          <li>Full guild config summary</li>
+          <li>Welcome, vouch, roles, tickets, apps</li>
+          <li>Enabled and disabled states</li>
+          <li>Missing-reference warnings</li>
+        </ul>
+      </article>
+      <article class="mini-card">
+        <div class="mini-head"><span class="mini-number">9</span><h3>Persistence Notes</h3></div>
+        <ul>
+          <li>Settings persist across restarts</li>
+          <li>Panel channel and message IDs stored</li>
+          <li>Panels rebuild after restart</li>
+          <li>Deleted channels and roles fail gracefully</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="command-catalog" class="catalog-panel">
+      <div class="catalog-top">
+        <div>
+          <p class="eyebrow">Command Reference</p>
+          <h2 class="catalog-title">All Slash Commands</h2>
+        </div>
+        <a class="catalog-back" href="#main-content">Back to Setup</a>
+      </div>
+
+      <div class="catalog-grid">
+        <article class="catalog-card"><h3>/botservice</h3><p>Post the custom Discord bot service embed.</p></article>
+        <article class="catalog-card"><h3>/config</h3><p>Configure the community feature layer.</p></article>
+        <article class="catalog-card"><h3>/embed</h3><p>Post a custom embed in a text channel.</p></article>
+        <article class="catalog-card"><h3>/farms</h3><p>Manage the farm catalog for farm-order tickets.</p></article>
+        <article class="catalog-card"><h3>/giveaway</h3><p>Start and manage giveaways using the saved giveaway defaults.</p></article>
+        <article class="catalog-card"><h3>/help</h3><p>Show the combined bot help menu.</p></article>
+        <article class="catalog-card"><h3>/info</h3><p>Open community info commands.</p></article>
+        <article class="catalog-card"><h3>/levels</h3><p>Open leveling-related commands.</p></article>
+        <article class="catalog-card"><h3>/moderation</h3><p>Use moderation actions and staff controls.</p></article>
+        <article class="catalog-card"><h3>/post-template</h3><p>Post one of the built-in polished server templates.</p></article>
+        <article class="catalog-card"><h3>/setup-panel</h3><p>Post one of the ticket setup panels.</p></article>
+        <article class="catalog-card"><h3>/setupapps</h3><p>Open the interactive application builder.</p></article>
+        <article class="catalog-card"><h3>/setupchannels</h3><p>Configure utility and logging channels.</p></article>
+        <article class="catalog-card"><h3>/setuproles</h3><p>Configure staff and server roles.</p></article>
+        <article class="catalog-card"><h3>/setuptickets</h3><p>Build and publish ticket types with role-based access.</p></article>
+        <article class="catalog-card"><h3>/setupview</h3><p>Show the current full guild configuration.</p></article>
+        <article class="catalog-card"><h3>/setupvouch</h3><p>Configure the vouch channel and posting mode.</p></article>
+        <article class="catalog-card"><h3>/setupwelcome</h3><p>Configure the welcome message system.</p></article>
+        <article class="catalog-card"><h3>/spawners</h3><p>Configure spawner purchase settings.</p></article>
+        <article class="catalog-card"><h3>/suggest</h3><p>Submit a community suggestion.</p></article>
+        <article class="catalog-card"><h3>/suggestion</h3><p>Use staff suggestion management actions.</p></article>
+        <article class="catalog-card"><h3>/task</h3><p>Assign and manage simple staff tasks.</p></article>
+        <article class="catalog-card"><h3>/ticket</h3><p>Create and manage order or support tickets.</p></article>
+        <article class="catalog-card"><h3>/ticketpanel</h3><p>Post a community ticket or purchase panel.</p></article>
+        <article class="catalog-card"><h3>/ticketsettings</h3><p>Manage community ticket instructions and controls.</p></article>
+        <article class="catalog-card"><h3>/verificationpanel</h3><p>Post the verification panel.</p></article>
+        <article class="catalog-card"><h3>/vouch</h3><p>Post a vouch for a user into the configured vouch channel.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
