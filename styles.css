@@ -32,7 +32,11 @@ body {
   min-width: 320px;
   color: var(--text);
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 44%, var(--bg-bottom) 100%);
+  background:
+    radial-gradient(circle at 14% 10%, rgba(95, 111, 255, 0.24), transparent 24%),
+    radial-gradient(circle at 88% 18%, rgba(255, 126, 207, 0.18), transparent 22%),
+    radial-gradient(circle at 50% 72%, rgba(100, 218, 253, 0.12), transparent 30%),
+    linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 44%, var(--bg-bottom) 100%);
   overflow-x: hidden;
 }
 
@@ -53,52 +57,52 @@ a {
   width: 100%;
   height: 100%;
   z-index: 0;
-  opacity: 0.92;
+  opacity: 0.98;
 }
 
 .net-canvas {
   width: 100%;
   height: 100%;
   z-index: 1;
-  opacity: 0.58;
+  opacity: 0.9;
 }
 
 .bg-grid {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(143, 166, 255, 0.085) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(143, 166, 255, 0.085) 1px, transparent 1px);
   background-size: 44px 44px;
   mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1), transparent 88%);
-  opacity: 0.22;
+  opacity: 0.4;
 }
 
 .bg-glow {
-  filter: blur(24px);
-  opacity: 0.9;
+  filter: blur(18px);
+  opacity: 1;
   animation: floatGlow 16s ease-in-out infinite;
 }
 
 .bg-glow-one {
-  background: radial-gradient(circle, rgba(102, 133, 255, 0.26) 0%, transparent 60%);
-  width: 40rem;
-  height: 40rem;
-  left: -8rem;
-  top: -10rem;
+  background: radial-gradient(circle, rgba(102, 133, 255, 0.42) 0%, rgba(102, 133, 255, 0.2) 26%, transparent 62%);
+  width: 46rem;
+  height: 46rem;
+  left: -10rem;
+  top: -12rem;
 }
 
 .bg-glow-two {
-  background: radial-gradient(circle, rgba(255, 126, 207, 0.2) 0%, transparent 58%);
-  width: 34rem;
-  height: 34rem;
+  background: radial-gradient(circle, rgba(255, 126, 207, 0.34) 0%, rgba(255, 126, 207, 0.14) 30%, transparent 60%);
+  width: 38rem;
+  height: 38rem;
   right: -6rem;
   top: 14rem;
   animation-delay: -5s;
 }
 
 .bg-glow-three {
-  background: radial-gradient(circle, rgba(100, 218, 253, 0.18) 0%, transparent 58%);
-  width: 28rem;
-  height: 28rem;
+  background: radial-gradient(circle, rgba(100, 218, 253, 0.28) 0%, rgba(100, 218, 253, 0.12) 26%, transparent 58%);
+  width: 34rem;
+  height: 34rem;
   left: 36%;
   bottom: -10rem;
   animation-delay: -9s;
@@ -132,8 +136,9 @@ a {
   top: 0;
   z-index: 50;
   backdrop-filter: blur(20px);
-  background: rgba(6, 9, 15, 0.64);
+  background: rgba(6, 9, 15, 0.78);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .header-inner {
@@ -255,8 +260,11 @@ a {
   position: relative;
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
-  background: linear-gradient(180deg, rgba(16, 20, 32, 0.88) 0%, rgba(9, 12, 20, 0.92) 100%);
-  box-shadow: var(--shadow);
+  background: linear-gradient(180deg, rgba(18, 22, 36, 0.82) 0%, rgba(9, 12, 20, 0.88) 100%);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.02) inset,
+    0 0 40px rgba(101, 124, 255, 0.08),
+    var(--shadow);
   overflow: hidden;
 }
 
@@ -269,6 +277,19 @@ a {
   background:
     linear-gradient(135deg, rgba(96, 110, 255, 0.12), transparent 28%),
     radial-gradient(circle at top right, rgba(255, 126, 207, 0.08), transparent 30%);
+  pointer-events: none;
+}
+
+.hero-panel::after,
+.catalog-panel::after,
+.systems-block::after {
+  content: "";
+  position: absolute;
+  inset: -20% auto auto -10%;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(116, 139, 255, 0.2), transparent 70%);
   pointer-events: none;
 }
 
@@ -355,6 +376,7 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.035);
   backdrop-filter: blur(10px);
+  box-shadow: 0 0 24px rgba(110, 132, 255, 0.06);
 }
 
 .metric-kicker {
@@ -421,7 +443,9 @@ a {
   border-radius: 1.1rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: linear-gradient(180deg, rgba(16, 20, 32, 0.94), rgba(8, 10, 18, 0.92));
-  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.26);
+  box-shadow:
+    0 0 28px rgba(107, 132, 255, 0.12),
+    0 16px 34px rgba(0, 0, 0, 0.26);
   backdrop-filter: blur(12px);
   animation: floatCard 7s ease-in-out infinite;
 }
@@ -489,6 +513,7 @@ a {
   border-radius: 1.15rem;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0.012));
   backdrop-filter: blur(8px);
+  box-shadow: 0 0 18px rgba(100, 120, 255, 0.04);
 }
 
 .command-mark {
@@ -525,7 +550,9 @@ a {
   border-radius: var(--radius-lg);
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: linear-gradient(180deg, rgba(19, 23, 36, 0.96), rgba(11, 14, 22, 0.94));
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+  box-shadow:
+    0 0 26px rgba(105, 128, 255, 0.06),
+    0 18px 40px rgba(0, 0, 0, 0.22);
 }
 
 .mini-card {
