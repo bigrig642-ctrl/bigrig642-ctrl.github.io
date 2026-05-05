@@ -1,25 +1,47 @@
-# GitHub Setup Guide
+# DemoStake — Fake Money Only
 
-This folder contains the simplified GitHub Pages version of the setup guide.
-
-It is intentionally kept as a single dark-style landing page inspired by the PDF layout:
-
-- main setup options at the top
-- system overview cards in the middle
-- a side button that jumps to the full slash command list
+A static, GitHub Pages-ready casino-style demo using fake local credits.
 
 ## Files
 
-```text
-github/
-|- index.html
-|- 404.html
-|- styles.css
-`- script.js
+- `index.html` — page markup
+- `styles.css` — styling
+- `app.js` — login, fake balances, games, admin dashboard
+
+## Demo accounts
+
+Admin:
+
+```txt
+username: admin
+password: admin123
 ```
 
-## Use
+Player:
 
-Open `index.html` locally in a browser, or publish these files as a static site.
+```txt
+username: demo
+password: demo123
+```
 
-All links are relative, and there is no build step.
+## How to run locally
+
+Open `index.html` in your browser.
+
+## How to publish on GitHub Pages
+
+1. Create a new GitHub repository.
+2. Upload `index.html`, `styles.css`, `app.js`, and `README.md` to the root of the repo.
+3. Go to **Settings → Pages**.
+4. Under **Build and deployment**, choose:
+   - Source: **Deploy from a branch**
+   - Branch: **main**
+   - Folder: **/root**
+5. Save.
+6. Your site will appear at the GitHub Pages URL GitHub gives you.
+
+## Important
+
+This is a browser-only demo. Accounts and balances are stored in `localStorage`, so every visitor has their own local copy of the data.
+
+This project has no real authentication, no server, no database, no real money, no deposits, and no withdrawals.
